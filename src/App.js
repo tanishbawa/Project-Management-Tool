@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import Home from './Components/Home/Home';
+import NewTask from './Components/NewTask/NewTask';
+import CurrentTasks from './Components/CurrentTasks/CurrentTasks';
+import CompletedTasks from './Components/CompletedTasks/CompletedTasks';
+
+import {
+  Route,
+  Switch
+} from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home}></Route>
+      <Route path="/newTask" component={NewTask}></Route>
+      <Route path="/currentTasks" component={CurrentTasks}></Route>
+      <Route path="/completedTasks" component={CompletedTasks}></Route>
+    </Switch>
+    // <div className="App">
+    //   <Home />
+    // </div>
   );
 }
 
