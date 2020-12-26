@@ -19,9 +19,6 @@ function App() {
       <Route path="/currentTasks" component={CurrentTasks}></Route>
       <Route path="/completedTasks" component={CompletedTasks}></Route>
     </Switch>
-    // <div className="App">
-    //   <Home />
-    // </div>
   );
 }
 

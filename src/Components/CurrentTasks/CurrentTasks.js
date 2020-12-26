@@ -8,7 +8,6 @@ import axios from '../../axios-data';
 const CurrentTasks = () => {
 
     const [data, setData] = useState([]);
-
     const sendToCompleted = (item) => {
 
         axios.post("/Completed Tasks.json", item)
@@ -62,7 +61,7 @@ const CurrentTasks = () => {
                                     <td>{item.Project}</td>
                                     <td>{item.TaskDetail}</td>
                                     <td>{item.Deadline}</td>
-                                    <td><Button onClick={() => sendToCompleted(item)} color="secondary">Edit</Button></td>
+                                    <td><Button onClick={() => sendToCompleted(item)} color="secondary">Done</Button></td>
                                 </tr>)
                             })) : null
                     }
